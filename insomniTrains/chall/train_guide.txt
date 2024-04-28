@@ -1,0 +1,37 @@
+How do trains operate without crashing?
+
+The tracks are controlled by humans so there must be some protection built-in for safety of the trains.
+Since the train may de-rail if the switch is switched direct below it, train system implements a so called interlock.
+Interlock permanently gets feedback from sensors on track if the segment of the switch is occupied or not. If the segment is occupied, it won't allow switching.
+Segment occupation is overwatched by track sensors. If the segment entrance sensor is triggered then the traffic light turns RED meaning that segment is occupied and cannot be switched.
+On the other hand, if the exit sensor is triggered then traffic light is GREEN and the segment is free, so the switch can be switched.
+
+Examples:
+
+^ : track sensor
+* : traffic light
+X : rail switch
+▓ : train
+
+
+Train entered the segment. Segment is occupied now. Traffic light is RED and X cannot switch to B.
+
+           ▓▓▓▓▓▓▓->
+Track A: -------^*-----X------^------
+Track B:               \-----^---------
+
+Train left the segment. Segment is free now. Traffic light is GREEN and X can switch to B.
+
+                                 ▓▓▓▓▓▓▓->
+Track A: -------^*-----X------^------
+Track B:               \-----^---------
+
+This is a so-called interlocking principle for securing the route for train journeys.
+Only when controller receives and confirms those commands, the switch can be set to another track:
+
+1. Checking the admissibility of setting a route. Is the switch already in requested position?
+2. Setting the route according to the locking documents. The switch position is requested.
+3. Checking the route for clearance.
+4. Securing the route by setting and locking the switch.
+
+> Do not spam message on realistic setup and allow for at least 0.1s delay between each TCP frame
