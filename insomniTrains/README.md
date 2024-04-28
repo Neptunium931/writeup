@@ -16,7 +16,7 @@ find in the `insomniTrains.pcap` the Protocol for the communicate to the `insomn
 - Write Multiple Registers (16)
 
 ### Write Registers in example
-I identified three paloads which are four writings of three registers `1001`, `1002`, `1003`
+I identified three paload which are four writings of three registers `1001`, `1002`, `1003`
 ```python
 paload1 = [
     [17201, 21297, 12336],
