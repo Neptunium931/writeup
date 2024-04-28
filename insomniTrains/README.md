@@ -1,7 +1,7 @@
 # Exploraion 
 
 ## train 
-<img src="./pictures/20240427_050341.jpg" width="500" height="600"\> 
+<img src="./pictures/20240427_050341.jpg" width="500" height="600"> 
 
 ## File
 - `Dockerfile` and `insomniTrainSim` use for poc in local 
